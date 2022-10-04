@@ -17,9 +17,9 @@ public class QuizApplication {
 		char grade = 0;
 		if (correctAnsCount >= 8) {
 			grade = 'A';
-		} else if (correctAnsCount >= 6 && correctAnsCount < 8) {
+		} else if (correctAnsCount >= 5 && correctAnsCount < 8) {
 			grade = 'B';
-		} else if (correctAnsCount < 6) {
+		} else if (correctAnsCount < 5) {
 			grade = 'C';
 		}
 
@@ -41,6 +41,7 @@ public class QuizApplication {
 
 		String optionB = sc.nextLine();
 		q1.setOption2("B." + optionB);
+		
 		System.out.println("Enter option C");
 
 		String optionC = sc.nextLine();
@@ -65,23 +66,28 @@ public class QuizApplication {
 		System.out.println("\n\t\t\t Menu");
 		System.out.println("             A.Attempt Quiz                           B.View Score");
 		System.out.println("             C.View Score of All Students             D.Add Question");
+		
 		System.out.println("Enter your choice >>");
 		char input = sc.next().charAt(0);
 
 		switch (input) {
 		case 'A':
+		case 'a':
 			attemptQuiz();
 			break;
 		case 'B':
+		case 'b':
 			System.out.println("Enter your name");
 			String name = sc.next();
 			viewScore(name);
 			break;
 		case 'C':
+		case 'c':
 			viewScoreOfAllStudents();
 
 			break;
 		case 'D':
+		case 'd':
 			addQuestion();
 			break;
 		default:
@@ -137,7 +143,7 @@ public class QuizApplication {
 			System.out.println(q.getOption3());
 			System.out.println(q.getOption4());
 
-			System.out.println("Enter your choice");
+			System.out.println("Enter your Option in Upper case");
 			ans = sc.next().charAt(0);
 
 			int res = Character.compare(ans, q.getAnswer().charAt(0));
