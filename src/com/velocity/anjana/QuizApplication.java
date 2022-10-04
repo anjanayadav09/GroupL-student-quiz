@@ -93,7 +93,7 @@ public class QuizApplication {
 		default:
 			System.out.println("Choice is not correct");
 		}
-		System.out.println("Do you want to continue");
+		System.out.println("Do you want to continue ?");
 		String i = sc.next();
 		if (i.equalsIgnoreCase("yes") || i.equalsIgnoreCase("y")) {
 			getMenu();
