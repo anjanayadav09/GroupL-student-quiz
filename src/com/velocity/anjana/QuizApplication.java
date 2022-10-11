@@ -9,6 +9,7 @@ public class QuizApplication {
 
 	public static void main(String args[]) throws SQLException {
 		QuizApplication app = new QuizApplication();
+		System.out.println("WELCOME TO QUIZ APPLICATION!!!");
 		app.getMenu();
 
 	}
