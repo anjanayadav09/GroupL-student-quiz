@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class QuizApplication {
 
 	public static void main(String args[]) throws SQLException {
+		System.out.println("Welcome!");
 		QuizApplication app = new QuizApplication();
 		app.getMenu();
 
